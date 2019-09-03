@@ -11,6 +11,8 @@ import android.os.Bundle;
 import java.util.ArrayList;
 import java.util.List;
 
+import okhttp3.OkHttpClient;
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -30,10 +32,15 @@ private Retrofit retrofit;
         setContentView(R.layout.activity_main);
 
         recyclerView = findViewById(R.id.movies_recycler);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setLayoutManager(new GridLayoutManager(this,  2));
+
+        OkHttpClient client  = new OkHttpClient.Builder()
+                .addInterceptor(new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
+                .build();
 
         retrofit = new Retrofit.Builder()
                 .baseUrl("https://admin.coverappke.com/api/post/")
+                .client(client)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 

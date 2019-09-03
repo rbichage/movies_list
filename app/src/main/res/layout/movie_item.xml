@@ -7,7 +7,6 @@
     app:cardElevation="4dp"
     app:cardCornerRadius="4dp"
     android:layout_marginStart="8dp"
-    android:layout_marginEnd="8dp"
     android:layout_marginTop="8dp"
     >
 
@@ -33,18 +32,21 @@
         android:paddingEnd="8dp"
         android:paddingTop="24dp"
         android:textColor="@android:color/white"
+        android:maxLines="2"
         />
 
     <TextView
         android:id="@+id/movie_genre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
         android:text="movie genre"
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="8dp"
         android:layout_below="@id/movie_title"
         android:textAlignment="center"
+        android:maxLines="2"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
         />
 
     </RelativeLayout>

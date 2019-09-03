@@ -6,6 +6,12 @@ import com.google.gson.annotations.SerializedName;
 
 public class Movie {
 
+    /**
+     *  a Pojo class to model Movie
+     *
+     *
+     * **/
+
     @SerializedName("movieID")
     @Expose
     private Integer movieID;

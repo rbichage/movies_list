@@ -11,6 +11,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+/**
+ *
+ * An adapter is a bridge between layout and your  code(data).
+ *
+ * An adapter inflates layout from your code
+ *
+ * In this  case our data is a list of  movies from https://admin.coverappke.com/api/post/assessment.php
+ *
+ * **/
 public class MoviesListAdapter extends RecyclerView.Adapter<MoviesListAdapter.ViewHolder> {
     private List<Movie> movieList;
     private Context context;
